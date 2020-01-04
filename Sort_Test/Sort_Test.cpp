@@ -145,13 +145,13 @@ int findPos(int *a, int slow, int high)
 
 	while (slow<high)
 	{
-		while (slow < high && a[high]>base)
+		while (slow < high && a[high]>=base)
 		{
 			high--;
 		}
 		a[slow] = a[high];
 
-		while (slow<high&&a[slow]<base)
+		while (slow<high&&a[slow]<=base)
 		{
 			slow++;
 		}
